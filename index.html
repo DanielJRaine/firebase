@@ -12,14 +12,10 @@
 
       <h1>Fire Base Tutorial</h1>
 
-      <p>First Name:</p>
-      <div id='firstname'></div>
-      <p>Last Name:</p>
-      <div id='lastname'></div>
-      <p>Profession:</p>
-      <div id='profession'></div>
-      <p>Addiction:</p>
-      <div id='addiction'></div>
+      <p>First Name: <span id='firstname'></span></p>
+      <p>Last Name: <span id='lastname'></span></p>
+      <p>Profession: <span id='profession'></span></p>
+      <p>Addiction: <span id='addiction'></span></p>
 
 
       <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
@@ -35,8 +31,13 @@
   firebase.initializeApp(config);
 
   var fname = document.getElementById('firstname');
+  // getting the element with an id of first name
   var dbRef = firebase.database().ref().child('firstname');
-  dbRef.on('value',snap => fname.innerText = snap.val());
+  // Creating a database reference by creating a child location to the 'first name'
+  // location
+  dbRef.on('value',x => fname.innerText = x.val());
+  // syncronizing the changes using the on functions
+  // using arrow function to do it all in one line!
 
   var lname = document.getElementById('lastname');
   var dbRef1 = firebase.database().ref().child('lastname');
