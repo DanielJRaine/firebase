@@ -10,7 +10,17 @@
     </head>
     <body>
 
-        <h1 id="bigOne"></h1>
+      <h1>Fire Base Tutorial</h1>
+
+      <p>First Name:</p>
+      <div id='firstname'></div>
+      <p>Last Name:</p>
+      <div id='lastname'></div>
+      <p>Profession:</p>
+      <div id='profession'></div>
+      <p>Addiction:</p>
+      <div id='addiction'></div>
+
 
       <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
 <script>
@@ -24,9 +34,21 @@
   };
   firebase.initializeApp(config);
 
-  var bigOne = document.getElementById('bigOne');
-  var dbRef = firebase.database().ref().child('text');
-  dbRef.on('value',snap => bigOne.innerText = snap.val());
+  var fname = document.getElementById('firstname');
+  var dbRef = firebase.database().ref().child('firstname');
+  dbRef.on('value',snap => fname.innerText = snap.val());
+
+  var lname = document.getElementById('lastname');
+  var dbRef1 = firebase.database().ref().child('lastname');
+  dbRef1.on('value',snap => lname.innerText = snap.val());
+
+  var profession = document.getElementById('profession');
+  var dbRef2 = firebase.database().ref().child('profession');
+  dbRef2.on('value',snap => profession.innerText = snap.val());
+
+  var addiction = document.getElementById('addiction');
+  var dbRef2 = firebase.database().ref().child('addiction');
+  dbRef2.on('value',snap => addiction.innerText = snap.val());
 
 
 </script>
