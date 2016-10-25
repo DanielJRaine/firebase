@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Bettor Half</title>
+      <title>Firebase</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,47 +12,6 @@
 
       <h1>Fire Base Tutorial</h1>
 
-      <p>First Name: <span id='firstname'></span></p>
-      <p>Last Name: <span id='lastname'></span></p>
-      <p>Profession: <span id='profession'></span></p>
-      <p>Addiction: <span id='addiction'></span></p>
-
-
-      <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBkmw-vbMTDNGJss3bDQrRTaJCslMCP65s",
-    authDomain: "bettor-half-70e6d.firebaseapp.com",
-    databaseURL: "https://bettor-half-70e6d.firebaseio.com",
-    storageBucket: "bettor-half-70e6d.appspot.com",
-    messagingSenderId: "495009639670"
-  };
-  firebase.initializeApp(config);
-
-  var fname = document.getElementById('firstname');
-  // getting the element with an id of first name
-  var dbRef = firebase.database().ref().child('firstname');
-  // Creating a database reference by creating a child location to the 'first name'
-  // location
-  dbRef.on('value',x => fname.innerText = x.val());
-  // syncronizing the changes using the on functions
-  // using arrow function to do it all in one line!
-
-  var lname = document.getElementById('lastname');
-  var dbRef1 = firebase.database().ref().child('lastname');
-  dbRef1.on('value',snap => lname.innerText = snap.val());
-
-  var profession = document.getElementById('profession');
-  var dbRef2 = firebase.database().ref().child('profession');
-  dbRef2.on('value',snap => profession.innerText = snap.val());
-
-  var addiction = document.getElementById('addiction');
-  var dbRef2 = firebase.database().ref().child('addiction');
-  dbRef2.on('value',snap => addiction.innerText = snap.val());
-
-
-</script>
 
     </body>
 

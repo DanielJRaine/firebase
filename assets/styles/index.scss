@@ -1,10 +1,10 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
+@import 'colors';
 
 body {
-  background-color: lightblue;
-  color: #333;
+  background-color: $background-color;
+  color: $font;
 }
 
 h1 {
@@ -18,7 +18,7 @@ p {
 }
 
 span {
+  font-family: serif;
   font-size: 40px;
   text-align: center;
-  font-family: serif;
 }
