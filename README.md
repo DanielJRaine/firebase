@@ -11,7 +11,7 @@ By the end of this, developers should be able to:
 ## Instructions
 
 1.  Fork and clone this repository.
-2.  Install Dependencies!
+2.  Install Dependencies! 
 3.  Download JSON Object [JSON](https://www.dropbox.com/s/pk9qjj51wzbpm3c/bettor-half-70e6d-export.json?dl=0)
 4.  Download Presentation[Presentation](https://www.dropbox.com/s/olnfbo7ioltyetp/firebase.key?dl=0)
 
