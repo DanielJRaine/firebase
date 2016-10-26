@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Bettor Half</title>
+      <title>Firebase</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,8 +12,8 @@
 
       <h1>Fire Base Tutorial</h1>
 
-      <p>First Name: <span id='firstname'></span></p>
-      <p>Last Name: <span id='lastname'></span></p>
+      <p>First Name: <span id='first-name'></span></p>
+      <p>Last Name: <span id='last-name'></span></p>
       <p>Profession: <span id='profession'></span></p>
       <p>Addiction: <span id='addiction'></span></p>
 
@@ -30,26 +30,28 @@
   };
   firebase.initializeApp(config);
 
-  var fname = document.getElementById('firstname');
+
+
+  var firstName = document.getElementById('first-name');
   // getting the element with an id of first name
   var dbRef = firebase.database().ref().child('firstname');
   // Creating a database reference by creating a child location to the 'first name'
   // location
-  dbRef.on('value',x => fname.innerText = x.val());
-  // synchronize the changes using the on functions
-  // using arrow function to do it all in one line!
+  dbRef.on('value',snap => firstName.innerText = snap.val());
+  // synchronize the changes using the (on) function
+  // using fat arrow function to do it all in one line!
 
-  var lname = document.getElementById('lastname');
+  var lastName = document.getElementById('last-name');
   var dbRef1 = firebase.database().ref().child('lastname');
-  dbRef1.on('value',snap => lname.innerText = snap.val());
+  dbRef1.on('value',snap => lastName.innerText = snap.val());
 
   var profession = document.getElementById('profession');
   var dbRef2 = firebase.database().ref().child('profession');
   dbRef2.on('value',snap => profession.innerText = snap.val());
 
   var addiction = document.getElementById('addiction');
-  var dbRef2 = firebase.database().ref().child('addiction');
-  dbRef2.on('value',snap => addiction.innerText = snap.val());
+  var dbRef3 = firebase.database().ref().child('addiction');
+  dbRef3.on('value',snap => addiction.innerText = snap.val());
 
 
 </script>
