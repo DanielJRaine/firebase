@@ -1,4 +1,4 @@
-# Firbase MEET UP
+# Firebase MEET UP
 
 ## Objectives
 
