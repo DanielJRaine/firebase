@@ -11,14 +11,15 @@ By the end of this, developers should be able to:
 ## Instructions
 
 1.  Fork and clone this repository.
-2.  Install Dependencies! 
+2.  Install Dependencies!
 3.  Download JSON Object [JSON](https://www.dropbox.com/s/pk9qjj51wzbpm3c/bettor-half-70e6d-export.json?dl=0)
-4.  Download Presentation[Presentation](https://www.dropbox.com/s/olnfbo7ioltyetp/firebase.key?dl=0)
+4.  Download Presentation[Presentation](https://www.dropbox.com/s/9ta68ujvj0mlsmm/firebase%20%28Nishon%E2%80%99s%20MacBook%20Pro%27s%20conflicted%20copy%202016-10-26%29%20copy.key?dl=0)
 
 ## Code Along
 
-- Fork and Clone and install dependencies if you haven't already
+- Fork and Clone, npm install and grunt serve
 - Sign into firebase/google and Create New Project (Link below)
+- Copy Initialize Firebase code to clipboard
 - [FireBase](https://console.firebase.google.com/)
 - Go to Databases -> Rules change to True
 - Download and import JSON object
